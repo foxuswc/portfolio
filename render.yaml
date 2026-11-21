@@ -1,9 +1,9 @@
-# Deploy this repository as a free Render Static Site.
+# Render Blueprint for the portfolio static site.
 services:
   - type: web
     name: portfolio
     runtime: static
     plan: free
-    buildCommand: echo "Static site: no build required"
+    buildCommand: 'echo "Static site ready"'
     staticPublishPath: .
     autoDeployTrigger: commit
