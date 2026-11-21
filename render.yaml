@@ -3,7 +3,6 @@ services:
   - type: web
     name: portfolio
     runtime: static
-    plan: free
     buildCommand: 'echo "Static site ready"'
     staticPublishPath: .
     autoDeployTrigger: commit
