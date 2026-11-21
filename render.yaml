@@ -1,0 +1,9 @@
+# Deploy this repository as a free Render Static Site.
+services:
+  - type: web
+    name: portfolio
+    runtime: static
+    plan: free
+    buildCommand: echo "Static site: no build required"
+    staticPublishPath: .
+    autoDeployTrigger: commit
