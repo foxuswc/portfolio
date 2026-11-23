@@ -76,7 +76,7 @@ img{display:block;max-width:100%}
 .section-heading{margin:9px 0 0;font-size:clamp(48px,5.2vw,80px);font-style:italic;line-height:.98}
 .section-aside{font-size:9px;letter-spacing:.24em;font-weight:700;color:#696573;text-transform:uppercase;padding-bottom:9px;white-space:nowrap}
 .projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.project-card{width:100%;border:1px solid rgba(88,81,98,.13);border-radius:16px;background:rgba(255,255,255,.43);box-shadow:0 14px 40px rgba(78,72,98,.035);padding:0;text-align:left;overflow:hidden;position:relative;transition:transform .36s cubic-bezier(.2,.9,.2,1),box-shadow .36s,background .3s}
+.project-card{display:block;color:inherit;text-decoration:none;cursor:pointer;width:100%;border:1px solid rgba(88,81,98,.13);border-radius:16px;background:rgba(255,255,255,.43);box-shadow:0 14px 40px rgba(78,72,98,.035);padding:0;text-align:left;overflow:hidden;position:relative;transition:transform .36s cubic-bezier(.2,.9,.2,1),box-shadow .36s,background .3s}
 .project-card:hover{transform:translateY(-8px);box-shadow:0 26px 65px rgba(65,58,84,.12);background:#fff9}
 .preview{height:248px;overflow:hidden;position:relative;display:flex;justify-content:center;align-items:center}
 .project-card:hover .mock-device{transform:translateY(2px) scale(1.025)}
@@ -227,19 +227,19 @@ img{display:block;max-width:100%}
     <section class="container work" id="work" aria-labelledby="work-title">
       <div class="section-top reveal"><div><div class="eyebrow">精选项目 <span class="rule"></span></div><h2 class="section-heading editorial" id="work-title">作品与实验</h2></div><div class="section-aside">真实实践 / 独立探索</div></div>
       <div class="projects">
-        <button class="project-card reveal" data-project="ra" aria-label="查看 RA Studio 项目详情">
+        <a class="project-card reveal" href="ra-studio.html" aria-label="进入 RA Studio 完整项目案例页面">
           <div class="preview preview-ra">
             <span class="mock-label">概念视觉</span>
             <div class="mock-device"><div class="mock-top"><i></i><i></i><i></i><span>注册申报智能工作台</span></div>
               <div class="ra-ui"><div class="ra-sidebar"><div class="ra-logo"><b></b> RA Studio</div><div class="ra-menu"><div class="on">⌂ &nbsp; Overview</div><div>◧ &nbsp; Source Hub</div><div>✧ &nbsp; AI Writing</div><div>☷ &nbsp; Review</div><div>◎ &nbsp; Evidence</div></div></div>
-              <div class="ra-main"><span class="super">专业工作流 · AI 协作</span><h4>RA Studio</h4><p>将专业写作、审阅与证据核验连接起来。</p><span class="ra-pill">进入工作台 ↗</span>
+              <div class="ra-main"><span class="super">专业工作流 · AI 协作</span><h4>RA Studio</h4><p>将专业写作、审阅与证据核验连接起来。</p><span class="ra-pill">查看完整项目案例 ↗</span>
                 <svg class="ra-wave" viewBox="0 0 320 220" fill="none" aria-hidden="true"><defs><linearGradient id="mesh" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8984da" stop-opacity="0"/><stop offset=".52" stop-color="#d7ccff" stop-opacity=".9"/><stop offset="1" stop-color="#a1cdec" stop-opacity=".08"/></linearGradient></defs>
                   <g stroke="url(#mesh)" stroke-width=".86"> <path d="M-30 150Q65 28 165 140T342 120"/><path d="M-30 160Q65 40 165 150T342 130"/><path d="M-30 170Q65 52 165 160T342 140"/><path d="M-30 180Q65 64 165 170T342 150"/><path d="M-30 190Q65 76 165 180T342 160"/><path d="M-30 200Q65 88 165 190T342 170"/><path d="M-30 210Q65 100 165 200T342 180"/><path d="M-30 140Q65 16 165 130T342 110"/><path d="M-30 130Q65 4 165 120T342 100"/><path d="M-30 120Q65 -8 165 110T342 90"/></g>
                   <g stroke="url(#mesh)" stroke-width=".6" opacity=".42"><path d="M35 -10Q110 110 47 230"/><path d="M58 -10Q133 110 70 230"/><path d="M81 -10Q156 110 93 230"/><path d="M104 -10Q179 110 116 230"/><path d="M127 -10Q202 110 139 230"/><path d="M150 -10Q225 110 162 230"/><path d="M173 -10Q248 110 185 230"/><path d="M196 -10Q271 110 208 230"/><path d="M219 -10Q294 110 231 230"/></g>
                 </svg></div></div></div>
           </div>
           <div class="project-bottom"><div class="project-index">01 / 商业化产品实践</div><div class="project-title-row"><strong class="project-title">RA Studio</strong><span class="project-arrow">↗</span></div><p class="project-description">参与从产品构思、客户 POC 到项目中标的全过程，让 AI 参与专业申报，也让重要内容有据可查。</p><div class="tags"><span class="tag">企业级 AI</span><span class="tag">产品设计</span><span class="tag">XAI</span></div></div>
-        </button>
+        </a>
         <button class="project-card reveal" data-project="demand" aria-label="查看 DemandLoop 项目详情" style="transition-delay:.07s">
           <div class="preview preview-demand"><span class="mock-label">概念视觉</span>
             <div class="mock-device light-device"><div class="mock-top"><i></i><i></i><i></i><span>购前疑虑与决策</span></div><div class="demand-ui"><div class="demand-brand"><b>✦</b> DemandLoop</div><h4>信息不再散落。<br>判断更有依据。</h4><div class="demand-search">你想确认什么？<em>↗</em></div>
