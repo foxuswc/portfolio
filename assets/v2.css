@@ -15,3 +15,14 @@ html{scroll-padding-top:100px}body{background:var(--paper);font-size:16px}button
 .site .container{padding-left:clamp(24px,5.2vw,84px);padding-right:clamp(24px,5.2vw,84px)}
 @media(max-width:720px){.site .container{padding-left:20px;padding-right:20px}}
 @media(max-width:360px){.site .container{padding-left:16px;padding-right:16px}}
+
+/* Screenshot review: continuous hero background and simpler contact entry. */
+@media(min-width:721px){
+  .hero-photo{top:-88px;height:calc(100% + 88px)}
+}
+@media(min-width:1600px){
+  .hero-photo{right:0}
+}
+.notes-photo.notes-color{background:linear-gradient(135deg,#ece5f5,#d9cbed);border-left:0}
+.notes-photo.notes-color::after{display:none}
+.contact-text .contact-link{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
