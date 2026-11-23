@@ -1,25 +1,370 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="RA Studio — 企业级 AI 药品注册申报工作台：从产品定义、AI 工作流设计、可信质量控制到真实客户验证。"><title>RA Studio · 项目深度案例 | 舒薇澄</title>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="RA Studio 项目案例：从药品注册申报业务洞察，到 M1–M5 文档工作流、AI 证据溯源、四轮质量门控与客户商业化验证。">
+<meta name="theme-color" content="#f8fbfd">
+<title>RA Studio · 企业级 AI 产品深度案例 | 舒薇澄</title>
 <style>
-:root{--ink:#1a2b42;--muted:#687990;--blue:#3468a2;--pale:#edf4fb;--line:#dfe8f1;--bg:#f8fafc;--white:#fff;--green:#188274}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:15px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg)}a{color:inherit;text-decoration:none}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid #7fb5ef;outline-offset:3px}.wrap{max-width:1120px;margin:auto;padding:0 32px}.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:67px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:750;letter-spacing:.05em}.navlinks{display:flex;gap:24px;align-items:center;font-size:13px;color:var(--muted)}.back{color:var(--blue);font-weight:700}.hero{padding:94px 0 70px;background:linear-gradient(125deg,#eaf3ff 0%,#f8fbff 50%,#eff7f8 100%);border-bottom:1px solid var(--line)}.eyebrow{color:var(--blue);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800}.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.13;letter-spacing:-.04em;margin:20px 0}.hero h1 span{color:var(--blue)}.lede{font-size:clamp(17px,2.2vw,22px);max-width:790px;line-height:1.75;margin:0;color:#3b526b}.pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:28px}.pill{border:1px solid #c7d9ee;background:#ffffffad;color:#42658d;border-radius:99px;padding:5px 12px;font-size:12px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:47px}.stat{background:#fff;border:1px solid #d7e6f5;border-radius:13px;padding:23px 22px}.stat b{font-size:31px;color:var(--blue);display:block;line-height:1.2}.stat span{font-size:12px;color:var(--muted)}.stat small{display:block;color:#8494a6;font-size:10px;margin-top:8px}.layout{display:grid;grid-template-columns:218px minmax(0,1fr);gap:44px;padding-top:48px;padding-bottom:90px}.sidebar{position:sticky;top:100px;align-self:start;border-left:1px solid var(--line);padding:0 0 0 17px;display:flex;flex-direction:column;gap:5px}.sidebar a{font-size:13px;color:var(--muted);padding:6px 9px;border-radius:6px}.sidebar a:hover,.sidebar a.active{color:var(--blue);background:var(--pale)}section{scroll-margin-top:90px;margin-bottom:78px}h2{font-size:29px;line-height:1.4;letter-spacing:-.025em;margin:0 0 13px}h3{font-size:20px;margin:32px 0 12px}p{margin:10px 0 17px}.sub{color:var(--muted);max-width:760px}.rule{height:1px;background:var(--line);margin:30px 0}.kicker{font-size:12px;letter-spacing:.12em;font-weight:800;color:var(--blue);margin-bottom:10px}.highlight{font-weight:650;color:var(--blue)}.quote{border-left:3px solid var(--blue);background:#edf4fb;padding:16px 22px;margin:25px 0;border-radius:0 9px 9px 0;font-weight:550}.columns{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:22px}.panel{border:1px solid var(--line);border-radius:11px;padding:22px;background:#fff}.panel .num{font-size:12px;font-weight:800;color:var(--blue)}.panel h4{font-size:16px;margin:6px 0}.panel p{font-size:13px;color:var(--muted);margin-bottom:0}.timeline{border-left:2px solid #d8e5f2;margin:24px 0 0 12px}.step{position:relative;padding:0 0 26px 30px}.step:before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;background:#fff;border:3px solid var(--blue);border-radius:50%}.step h4{margin:0 0 6px;font-size:16px}.step p{font-size:14px;color:var(--muted);margin:0}.flow{display:flex;flex-wrap:wrap;gap:9px;margin:23px 0}.node{flex:1 1 115px;min-width:115px;border:1px solid #d4e2f2;background:#fff;border-radius:9px;padding:13px 12px;text-align:center}.node strong{display:block;font-size:13px}.node small{font-size:11px;color:var(--muted)}.arrow{align-self:center;color:#8aa4c0}.screen{border:1px solid #d3deeb;background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 13px 34px #305b8410;margin:25px 0}.screenhead{background:#f3f7fc;border-bottom:1px solid var(--line);padding:12px 18px;font-size:12px;color:#55718d;display:flex;justify-content:space-between}.screenbody{display:grid;grid-template-columns:185px 1fr;min-height:320px}.screenleft{border-right:1px solid var(--line);padding:15px;background:#f8fbfe;font-size:12px;color:var(--muted)}.screenleft div{padding:10px 8px;border-radius:5px}.screenleft .selected{background:#e7f1fd;color:#235b99;font-weight:700}.screenmain{padding:22px}.screenmain .doc{padding:17px;background:#f8fafc;border:1px solid var(--line);border-radius:7px;font-size:13px;line-height:2}.mark{background:#fff1c8;border-bottom:2px solid #e2af48;padding:2px}.evidence{border:1px solid #cadff1;background:#f0f7ff;border-radius:9px;padding:13px 16px;font-size:12px;margin-top:13px;color:#395877}.caption{font-size:12px;color:var(--muted);margin-top:-10px}.meter{height:9px;background:#e5edf6;border-radius:100px;overflow:hidden;margin:8px 0}.meter span{display:block;height:100%;background:var(--blue)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.metric{background:#fff;border:1px solid var(--line);padding:21px;border-radius:10px}.metric b{font-size:29px;color:var(--blue);display:block}.metric small{color:var(--muted);font-size:12px}.badge{display:inline-flex;align-items:center;border:1px solid #cddfeb;background:#f1f7fd;border-radius:5px;padding:3px 8px;font-size:11px;color:#446b96}.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}.compare .panel:first-child{background:#f8fafc}.disclaimer{font-size:12px;color:#8293a5;background:#f2f5f9;border-radius:8px;padding:14px 18px;margin-top:22px}.footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:13px}.cta{display:inline-flex;background:var(--blue);color:#fff;font-weight:700;border-radius:7px;padding:11px 20px;margin-top:12px}.cta:hover{background:#245487}.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tabbar button{border:1px solid var(--line);background:#fff;padding:8px 13px;border-radius:7px;color:#567;cursor:pointer}.tabbar button[aria-selected=true]{background:#eaf3fd;color:var(--blue);border-color:#8eafd4}.tabcontent{border:1px solid var(--line);border-radius:10px;background:#fff;margin-top:12px;padding:21px}.tabcontent[hidden]{display:none}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:520px;font-size:13px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:12px 10px;vertical-align:top}th{color:#456581;background:#f3f8fd}.label{color:var(--blue);font-weight:700}.responsibility{border-left:3px solid #b0c7e4;padding-left:16px}.end{background:#eaf3fc;padding:38px;border-radius:14px}.end h2{margin-top:0}
-@media(max-width:850px){.wrap{padding:0 20px}.layout{display:block;padding-top:30px}.sidebar{position:static;flex-direction:row;overflow:auto;white-space:nowrap;border:0;border-bottom:1px solid var(--line);padding:0 0 12px;margin-bottom:35px}.stats{grid-template-columns:1fr 1fr}.hero{padding:62px 0}.screenbody{grid-template-columns:120px 1fr}.navlinks a:not(.back){display:none}}@media(max-width:560px){.stats,.columns,.compare,.metrics{grid-template-columns:1fr}.screenbody{grid-template-columns:1fr}.screenleft{display:none}.screenmain{padding:13px}.flow .arrow{display:none}.hero h1{font-size:43px}.stat b{font-size:27px}.end{padding:24px}}
-</style></head>
-<body><header class="top"><div class="wrap nav"><a class="brand" href="/">舒薇澄 <span style="color:#7c9ab8;font-weight:400">/ Selected Work</span></a><nav class="navlinks"><a href="#overview">项目概览</a><a href="#product">产品设计</a><a href="#evaluation">AI 评测</a><a class="back" href="/">← 返回作品集</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="eyebrow">Selected work / 01 · Enterprise AI</div><h1>RA Studio<span>.</span><br>让专业文档生成<br><span>真正可信、可交付。</span></h1><p class="lede">一个面向制药企业的 AI 注册申报工作台。从行业需求洞察、M1–M5 产品架构，到长文档生成、证据溯源与质量评测，再到真实客户 POC 和商业化验证。</p><div class="pills"><span class="pill">0 → 1 产品设计</span><span class="pill">AI-native Workflow</span><span class="pill">可信 AI / XAI</span><span class="pill">B2B 商业化</span><span class="pill">2026.03 — 2026.11</span></div><div class="stats"><div class="stat"><b>72h → 0.5h</b><span>单章节净人工耗时（项目口径）</span><small>效率案例，依任务与验证条件变化</small></div><div class="stat"><b>99.3%</b><span>简历所列核心内容准确率</span><small>具体测试集及判定口径待公开</small></div><div class="stat"><b>7 家</b><span>关键客户验证及需求推进</span><small>药企与 CRO 场景</small></div><div class="stat"><b>55 万元</b><span>简历所列中标合同金额</span><small>最终签约口径以正式合同为准</small></div></div></div></div>
-<div class="wrap layout"><aside class="sidebar" aria-label="页面目录"><a href="#overview">01 / 项目概览</a><a href="#opportunity">02 / 机会与洞察</a><a href="#product">03 / 产品架构</a><a href="#workflow">04 / AI 工作流程</a><a href="#xai">05 / 证据溯源设计</a><a href="#evaluation">06 / 质量评测</a><a href="#business">07 / 客户与商业化</a><a href="#role">08 / 我的角色</a><a href="#reflection">09 / 复盘与迁移</a></aside><main>
-<section id="overview"><div class="kicker">01 — OVERVIEW</div><h2>不是一个“AI 写文档”工具</h2><p class="sub">药品注册申报要求大量专业章节，输入资料跨文档、跨部门、跨时间，产出不仅要写得快，还必须准确、完整，并支持专家逐条核查。</p><div class="quote">核心设计问题：如何把高度专业、非结构化的注册工作，转化为 AI 可以协作、专家愿意审核、企业愿意采购的可信生产流程？</div><div class="columns"><div class="panel"><div class="num">USERS</div><h4>谁在使用？</h4><p>药企注册人员、CMC 专家、专业医学写作人员、审核负责人，以及跨部门提供资料的协作者。</p></div><div class="panel"><div class="num">MY SCOPE</div><h4>我负责什么？</h4><p>参与立项与行业研究、产品信息架构、交互与原型、AI 质量评测、可信溯源设计、客户 POC 与商业化推进。</p></div></div></section>
-<section id="opportunity"><div class="kicker">02 — DISCOVERY</div><h2>从行业痛点，到可购买的产品需求</h2><p>我与公司创始人及行业专家开展交流，通过客户深度访谈和竞品研究，识别“资料整合—专业撰写—人工审核”工作链中的机会点，而不是直接从大模型的能力倒推场景。</p><div class="timeline"><div class="step"><h4>01 · 识别重复且高价值的专业劳动</h4><p>章节写作经常需要查询多份研究报告、稳定性资料、工艺及分析数据；投入大，且存在跨文档前后不一致的风险。</p></div><div class="step"><h4>02 · 分清“生成效率”和“专业可信”的两个价值</h4><p>生成速度可以成为切入点，但采购决策更关心审核成本、内容完整性和质量责任是否仍可控。</p></div><div class="step"><h4>03 · 将通用需求与项目差异分层</h4><p>把章节模板、数据抽取、引用溯源与审核工作流作为通用能力；将不同产品类型、客户 SOP 和申报要求放入可配置的专业能力层。</p></div><div class="step"><h4>04 · 用 POC 检验产品价值与采购意愿</h4><p>由客户提供目标章节和受控资料，确定评价维度，迭代文档和审核体验，逐步进入招投标和交付范围讨论。</p></div></div></section>
-<section id="product"><div class="kicker">03 — PRODUCT ARCHITECTURE</div><h2>按药品注册工作的完整链路设计产品</h2><p>产品覆盖 CTD（通用技术文件）M1–M5 的专业文档工作。设计上不以“聊天窗口”为中心，而以项目、资料、章节、审核和交付作为主要对象。</p><div class="flow"><div class="node"><strong>01 · 项目总控</strong><small>申报项目 / 任务 / 进度</small></div><span class="arrow">→</span><div class="node"><strong>02 · 资料空间</strong><small>上传 / 分类 / 关联</small></div><span class="arrow">→</span><div class="node"><strong>03 · 文档生产</strong><small>章节规划 / 生成 / 编辑</small></div><span class="arrow">→</span><div class="node"><strong>04 · 质量与变更</strong><small>审阅 / 证据 / 修订</small></div><span class="arrow">→</span><div class="node"><strong>05 · 提交归档</strong><small>导出 / 版本 / 留痕</small></div></div><h3>用“章节”组织任务，而不是让用户从零写 Prompt</h3><div class="panel"><div class="tablewrap"><table><thead><tr><th>设计对象</th><th>关键功能</th><th>为什么这样设计</th></tr></thead><tbody><tr><td class="label">申报项目</td><td>项目级文件集合、章节矩阵、状态</td><td>让多角色协作有一个共同上下文</td></tr><tr><td class="label">章节任务</td><td>预置章节模板、资料映射、生成任务</td><td>减少人工描述和漏项；明确交付范围</td></tr><tr><td class="label">资料资产</td><td>来源文件、版本、可检索片段</td><td>使生成内容能够回查来源</td></tr><tr><td class="label">审核对象</td><td>AI 建议、证据、人工接受/驳回</td><td>把专家判断显式纳入生产闭环</td></tr></tbody></table></div></div><p class="caption">以上为基于真实项目工作的公开化产品设计表达，并非内部系统的逐像素截图。</p></section>
-<section id="workflow"><div class="kicker">04 — AI WORKFLOW</div><h2>把不确定的生成任务拆成可检查的步骤</h2><p>以稳定性研究等资料密集型章节为例：AI 不应直接“阅读所有文件然后写完整章节”，而应先明确需要哪些信息，再检索与生成，并让审核者能回到原始证据。</p><div class="flow"><div class="node"><strong>资料解析</strong><small>表格 / 段落 / 元数据</small></div><span class="arrow">→</span><div class="node"><strong>章节规划</strong><small>所需事实 / 结构 / 缺口</small></div><span class="arrow">→</span><div class="node"><strong>检索定位</strong><small>匹配来源与证据</small></div><span class="arrow">→</span><div class="node"><strong>分段撰写</strong><small>依据模板形成初稿</small></div><span class="arrow">→</span><div class="node"><strong>质量校核</strong><small>完整性 / 一致性</small></div></div><div class="tabbar" role="tablist" aria-label="流程设计细节"><button role="tab" aria-selected="true" aria-controls="flow1" id="btn1">输入与资料</button><button role="tab" aria-selected="false" aria-controls="flow2" id="btn2">生成策略</button><button role="tab" aria-selected="false" aria-controls="flow3" id="btn3">异常与人工接管</button></div><div class="tabcontent" id="flow1" role="tabpanel" aria-labelledby="btn1"><h4>资料不是“上传即可信”</h4><p>设计重点包括文件分类、来源追踪、版本标识，以及章节需求与证据片段的映射。对表格中的单位、实验条件和时间点，尤其需要避免脱离原始上下文抽取。</p><span class="badge">关注：数据结构化 / 来源定位 / 版本</span></div><div class="tabcontent" id="flow2" role="tabpanel" aria-labelledby="btn2" hidden><h4>先规划，再分块撰写与核验</h4><p>按章节要求列出需要覆盖的事实，使用检索结果支撑段落生成。对于无法检索到充分依据的信息，应标记缺口并交由专家补充，而非自动编造。</p><span class="badge">关注：模板 / 检索 / 覆盖完整性</span></div><div class="tabcontent" id="flow3" role="tabpanel" aria-labelledby="btn3" hidden><h4>让 AI 知道何时停止</h4><p>遇到来源冲突、缺少关键资料、专业判断不充分或规则边界不明确的情况，生成结果进入待复核状态；人工专家负责最终取舍与签核。</p><span class="badge">关注：不确定性 / 责任边界 / 审核</span></div><div class="disclaimer">架构中的“解析—规划—检索—撰写—核验”是基于项目实践的公开化业务流程抽象，不代表所有节点均已作为独立 Agent 部署；具体底层实现与线上状态需以研发记录为准。</div></section>
-<section id="xai"><div class="kicker">05 — TRUST & EXPLAINABILITY</div><h2>从“生成了什么”走向“为什么可信”</h2><p>在高风险专业场景中，一个看似流畅的句子可能同时包含多个需要核实的事实。我的设计方向是将 AI 的解释能力深入到可核验的 Claim（事实性主张）层级。</p><div class="screen"><div class="screenhead"><strong>RA Studio / 章节审阅工作台</strong><span>交互概念示意 · 非真实客户数据</span></div><div class="screenbody"><div class="screenleft"><div>项目资料</div><div class="selected">3.2.P.8 稳定性</div><div>3.2.P.8.1 总结</div><div>3.2.P.8.2 方案</div><div>3.2.P.8.3 数据</div><div>质量审阅</div></div><div class="screenmain"><div class="doc">在拟定储存条件下，样品于指定考察周期内<span class="mark">主要质量指标保持稳定</span>，相关结论需结合批次、检测项目与原始研究记录确认。</div><div class="evidence"><strong>🔎 Claim 证据核验</strong><br>主张：考察周期内质量指标稳定<br>核验项：批次范围 · 检测项目 · 观察时间点 · 接受标准<br>证据状态：<b>待核查原始稳定性研究表</b><br>操作：查看来源 ｜ 接受建议 ｜ 修改后复核</div></div></div></div><p class="caption">为展示设计逻辑而重新绘制的脱敏示意；文案、数据状态均为示例，不代表具体申报结论。</p><div class="columns"><div class="panel"><div class="num">FROM</div><h4>句子级溯源</h4><p>在一段生成文本旁快速定位关联资料，帮助专家避免在多份源文件间反复寻找。</p></div><div class="panel"><div class="num">TO</div><h4>Claim 级核验</h4><p>把事实、条件、参数和专业结论分离，结合规则检查、证据支持与人工意见形成可解释的审阅链。</p></div></div><h3>审核交互的关键分工</h3><div class="tablewrap"><table><thead><tr><th>对象</th><th>AI 应做的事</th><th>人工应做的事</th></tr></thead><tbody><tr><td>事实陈述</td><td>标注主张并定位候选证据</td><td>核对证据是否真正支持结论</td></tr><tr><td>参数与范围</td><td>检查数值、单位、条件的一致性</td><td>确认业务解释与例外处理</td></tr><tr><td>规范引用</td><td>给出相关条款及适用提示</td><td>判定法规版本及实际适用性</td></tr><tr><td>修订建议</td><td>展示修改前后及依据</td><td>接受、编辑、驳回并留痕</td></tr></tbody></table></div></section>
-<section id="evaluation"><div class="kicker">06 — EVALUATION</div><h2>把“感觉写得不错”转成可复现的质量标准</h2><p>围绕准确性、完整性、数据一致性与专业规范，我推动搭建多层次评测框架，并使用专家案例开展多轮 POC。评测不仅看最终分数，也用于定位具体错误类型和安排产品迭代。</p><div class="metrics"><div class="metric"><b>3,750+</b><small>简历所述专业评测任务规模</small></div><div class="metric"><b>18</b><small>一级评测维度（简历口径）</small></div><div class="metric"><b>86% → 91%</b><small>简历所述自动化评测效率指标</small></div></div><h3>评测如何反向影响产品？</h3><div class="timeline"><div class="step"><h4>收集失败样本</h4><p>将错误归入漏写、数值不一致、引用错位、格式偏差、法规适配等可行动类型。</p></div><div class="step"><h4>分辨是资料问题、检索问题还是生成问题</h4><p>避免把所有错误都归因于“Prompt 不够好”。对召回缺失、解析错列、证据不充分分别采取不同策略。</p></div><div class="step"><h4>形成回归测试</h4><p>每轮修复后复测相同类型任务，观察是否改善目标指标，也检查是否出现新错误。</p></div></div><div class="panel"><h4>示例：质量评测矩阵</h4><div class="tablewrap"><table><thead><tr><th>维度</th><th>检查问题</th><th>典型反馈</th></tr></thead><tbody><tr><td>准确性</td><td>文中实验数据是否与来源一致？</td><td>对应原表定位错误 / 数字改写错误</td></tr><tr><td>完整性</td><td>章节要求的关键内容是否覆盖？</td><td>必要研究结果未列出</td></tr><tr><td>一致性</td><td>不同段落和表格是否存在冲突？</td><td>单位、条件或时间点不一致</td></tr><tr><td>规范性</td><td>章节结构和表述是否符合专业要求？</td><td>缺少必要的章节结构或说明</td></tr></tbody></table></div></div><div class="disclaimer">公开页采用简历中的统计数字；不同指标可能来自不同 POC、不同任务集合，不应被理解为同一次统一基准测试结果。原始样本、分母、专家评分方法等未在此公开。</div></section>
-<section id="business"><div class="kicker">07 — CUSTOMER VALIDATION</div><h2>从产品原型走向真实订单</h2><p>除了产品设计，我也参与需求交流、方案与 POC、述标和客户协调。对于 ToB AI 产品，真正的验证不仅是模型能否生成，还包括客户是否愿意在既有流程里使用并采购。</p><div class="timeline"><div class="step"><h4>需求沟通：找到客户的实际申报任务</h4><p>与药企、CRO 讨论目标章节、资料准备、专家审核和实施约束，明确通用功能与定制化边界。</p></div><div class="step"><h4>POC：共同定义可验收的结果</h4><p>围绕 M2/M3 核心章节开展验证，协调资料、样例生成与反馈，推动可衡量的质量评测标准。</p></div><div class="step"><h4>解决方案：从“能做什么”转向“如何落地”</h4><p>整合产品方案、实施路径、演示逻辑与风险应对，让客户理解系统交付与责任分工。</p></div><div class="step"><h4>商业成果：关键项目中标</h4><p>简历列示：参与 M3 项目中标，合同金额 55 万元；同时参与客户合同签订与交付衔接相关工作。</p></div></div><div class="quote">真实 B2B AI 产品的最后一公里，是让模型能力嵌入组织流程，并形成可解释、可验收、可持续运营的业务结果。</div></section>
-<section id="role"><div class="kicker">08 — OWNERSHIP</div><h2>我的贡献与协作边界</h2><div class="columns"><div class="panel"><h4>我主导 / 直接负责</h4><p>行业需求与客户沟通、核心产品信息架构、原型及交互设计、评测需求与结果分析、部分可信溯源方案、POC 组织及方案汇报。</p></div><div class="panel"><h4>与团队共同完成</h4><p>模型与检索技术实现、专业知识规则沉淀、质量指标确认、客户实施与商业化决策，由研发、行业专家、销售及项目团队共同承担。</p></div></div><p class="responsibility">我更希望以完整的产品决策链证明能力，而不是将算法研发、企业签约和团队成果全部表述为个人独立完成。</p></section>
-<section id="reflection"><div class="kicker">09 — REFLECTION</div><h2>这段经历真正留下的产品方法</h2><div class="timeline"><div class="step"><h4>信任不是一个“准确率数字”</h4><p>信任来自可见的证据、明确的边界、稳定的审核流程，以及系统在不确定时能够请求人工判断。</p></div><div class="step"><h4>工作流比单次生成更重要</h4><p>对于专业任务，价值存在于“准备资料—形成结果—审阅修改—交付复用”整条链路，而不只在输出一篇文字。</p></div><div class="step"><h4>评测应当服务下一轮产品决策</h4><p>评测不是写在汇报里的最终分数，而是不断发现瓶颈、验证修复、推动真实质量提升的机制。</p></div><div class="step"><h4>这些能力可以迁移到更多 AI 场景</h4><p>无论是电商经营 Agent、AI 导购，还是平台风险治理，都需要让 AI 提供有依据的判断，并设计何时交由人接管。</p></div></div></section>
-<div class="end"><div class="kicker">NEXT</div><h2>从高信任企业 AI，到更广泛的 AI 产品实践</h2><p>RA Studio 是我理解 AI 产品设计的起点：把真实业务问题转化为可靠、可验证、能创造价值的智能系统。</p><a class="cta" href="/">返回全部作品 ↗</a></div>
-</main></div><footer class="footer"><div class="wrap">© 2026 舒薇澄 · RA Studio / Product Case Study <span style="float:right">公开化设计复盘 · 内容不含客户原始申报资料</span></div></footer>
+:root{--ink:#203147;--sub:#5a7186;--faint:#7f91a2;--blue:#245f9a;--blue2:#3879b6;--teal:#0f918d;--line:#dce7ee;--bg:#f8fafc;--soft:#eef5fb;--white:#fff;--warn:#af6b16}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--bg);font:15px/1.85 -apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #78abdc;outline-offset:3px}
+.wrap{max-width:1170px;padding:0 34px;margin:auto}
+.top{z-index:100;position:sticky;top:0;background:rgba(255,255,255,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{font-size:14px;letter-spacing:.03em;font-weight:750;white-space:nowrap}.brand i{font-style:normal;color:#92a4b6;font-weight:400;margin:0 8px}
+.navlinks{display:flex;align-items:center;gap:26px;font-size:12px;color:#60788f}.navlinks a:hover,.navlinks .return{color:var(--blue)}.return{font-weight:650}
+.hero{background:radial-gradient(circle at 82% 24%,#dcecfb 0,transparent 35%),linear-gradient(125deg,#f0f7fd 0%,#f8fbfd 60%,#edf7f8 100%);border-bottom:1px solid var(--line);padding:80px 0 75px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+.eyebrow,.kicker{letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-size:11px;font-weight:800}
+.hero h1{font-size:clamp(43px,5vw,70px);line-height:1.19;letter-spacing:-.045em;margin:20px 0 23px;font-weight:740}
+.hero h1 em{color:var(--blue);font-style:normal}
+.lede{font-size:18px;line-height:1.82;color:#425b74;margin:0;max-width:660px}
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.pill{display:inline-flex;padding:4px 12px;background:rgba(255,255,255,.83);border:1px solid #cfdfeb;color:#4c6b88;border-radius:50px;font-size:11px}
+.hero-foot{margin-top:28px;color:#72899f;font-size:12px}
+.hero-art{border:1px solid #d6e5f3;border-radius:20px;background:linear-gradient(140deg,#fff,#f2f8fe);padding:20px;box-shadow:0 25px 65px #315d8913;transform:rotate(1deg)}
+.miniwindow{background:#fff;border:1px solid #dce5ef;border-radius:13px;overflow:hidden}
+.windowbar{height:33px;display:flex;align-items:center;gap:5px;padding:0 13px;border-bottom:1px solid #e6edf2;color:#7290ad;font-size:10px;letter-spacing:.04em}
+.dot{width:6px;height:6px;border-radius:50%;background:#aebfd0}.windowtitle{margin-left:auto;margin-right:auto}
+.mini-dashboard{display:grid;grid-template-columns:79px 1fr;min-height:270px}
+.mini-side{background:#1c466e;padding:18px 12px;color:#d9eaf8;font-size:10px;line-height:3.2}
+.mini-side div:first-child{color:#fff;font-size:12px;font-weight:750}
+.mini-content{padding:17px}.mini-content h4{font-size:13px;margin:0 0 14px}.matrix-mini{display:grid;grid-template-columns:36px repeat(4,1fr);gap:5px;text-align:center;font-size:9px}.matrix-mini>*{padding:8px 4px;background:#f4f8fc;border-radius:4px;color:#5f7890}.matrix-mini b{color:var(--blue);background:#e6f1fb}.matrix-mini strong{background:#f0faf8;color:#1f8c7e}
+.mini-bottom{margin-top:15px;display:grid;grid-template-columns:1fr 1fr;gap:9px}.mini-bottom>div{height:55px;border-radius:7px;background:#f5f8fc;padding:10px;font-size:9px;color:#6d8092}.minibar{height:5px;background:#dce8f1;border-radius:5px;margin-top:8px;overflow:hidden}.minibar:before{content:"";display:block;width:70%;height:100%;background:#47a9ac}
+.artcaption{font-size:10px;color:#899eb3;margin:10px 0 0;text-align:right}
+.hero-brief{margin-top:47px;padding:22px 0 0;border-top:1px solid #d5e3f0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.hero-brief div{border-left:2px solid #a8c7e5;padding-left:15px}.hero-brief b{font-size:14px;display:block}.hero-brief span{color:#6b8196;font-size:12px}
+.layout{display:grid;grid-template-columns:215px minmax(0,1fr);gap:58px;padding-top:54px;padding-bottom:95px}
+.sidebar{position:sticky;top:100px;align-self:start;display:flex;flex-direction:column;border-left:1px solid var(--line);padding-left:12px}
+.sidebar a{font-size:12px;padding:8px 10px;color:#708397;border-radius:6px;transition:.15s}.sidebar a.active,.sidebar a:hover{color:var(--blue);background:#eaf3fb}
+section{scroll-margin-top:95px;margin-bottom:86px}
+h2{font-size:clamp(25px,3vw,33px);font-weight:720;line-height:1.45;letter-spacing:-.025em;margin:10px 0 18px}
+h3{font-size:19px;letter-spacing:-.01em;margin:30px 0 12px}
+p{margin:9px 0 17px}
+.sub{color:var(--sub);max-width:820px}
+.small{font-size:12px;color:var(--faint)}
+.quote{border-left:3px solid var(--blue2);background:#edf5fc;padding:18px 23px;border-radius:0 10px 10px 0;font-size:16px;font-weight:600;line-height:1.7;margin:22px 0}
+.divider{height:1px;background:var(--line);margin:31px 0}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.thinpanel{border-top:1px solid #c7d9e9;padding:20px 6px 8px 0}.thinpanel small{color:var(--blue);font-size:11px;font-weight:750}.thinpanel h4{font-size:16px;margin:6px 0}.thinpanel p{font-size:13px;color:var(--sub)}
+.numline{display:grid;grid-template-columns:46px 1fr;gap:13px;padding:20px 0;border-bottom:1px solid var(--line)}.numline .num{color:var(--blue2);font-size:12px;font-weight:780;padding-top:3px}.numline h4{margin:0 0 6px;font-size:16px}.numline p{margin:0;color:var(--sub);font-size:13px}
+.painlist{border-top:1px solid var(--line);margin-top:24px}
+.tablewrap{overflow:auto;border-top:1px solid #ccdae7;margin-top:18px}
+table{width:100%;border-collapse:collapse;min-width:610px;font-size:13px;line-height:1.65}
+th,td{padding:14px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{font-size:11px;letter-spacing:.03em;color:#53708a;font-weight:700;background:#f0f6fb}
+td:first-child{font-weight:650}.tag{display:inline-flex;border:1px solid #cbdde8;background:#f1f7fd;border-radius:5px;color:#45719b;font-size:11px;line-height:1.5;padding:4px 8px}
+.tag.future{background:#f7f4ee;border-color:#e9ddc9;color:#977139}.tag.done{background:#eff9f6;border-color:#bde5dc;color:#188474}
+.module-nav{display:flex;gap:6px;margin:25px 0 0;flex-wrap:wrap}
+.module-tab{flex:1 1 106px;min-width:90px;border:1px solid #d8e6ef;padding:13px 9px;background:#fff;border-radius:9px;text-align:left;color:var(--sub);transition:.15s}
+.module-tab strong{display:block;font-size:16px;color:var(--blue);line-height:1.3}.module-tab span{font-size:11px}
+.module-tab[aria-selected=true]{border-color:#6399cb;box-shadow:inset 0 0 0 1px #6399cb;background:#edf6ff}
+.module-body{padding:28px 30px;border:1px solid #d7e5ef;background:#fff;border-radius:12px;margin-top:9px}
+.module-body h3{margin:0 0 7px}.module-body p{font-size:13px;color:var(--sub)}
+.module-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}
+.module-cols h4{font-size:12px;color:var(--blue);margin:0 0 10px}
+.bullets{list-style:none;padding:0;margin:0}.bullets li{position:relative;padding-left:15px;font-size:13px;margin:9px 0;color:#536b7e}.bullets li:before{content:"";position:absolute;left:1px;top:10px;background:#76a7c6;width:5px;height:5px;border-radius:50%}
+.flowline{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d6e3ee;margin:28px 0 14px}
+.flowstep{position:relative;padding:18px 18px 18px 0;border-bottom:1px solid var(--line);min-height:145px}
+.flowstep:before{content:"";position:absolute;top:-4px;left:0;background:var(--blue2);width:7px;height:7px;border-radius:50%}
+.flowstep small{font-size:11px;color:#6d9bc5;font-weight:750}
+.flowstep b{font-size:14px;display:block;margin:6px 0}
+.flowstep p{font-size:12px;color:var(--sub);margin:0;line-height:1.72}
+.threeflows{display:grid;grid-template-columns:96px 1fr;gap:0;margin-top:25px;border-top:1px solid var(--line)}
+.flowlabel{font-size:14px;color:var(--blue);font-weight:760;padding:21px 10px 19px 0;border-bottom:1px solid var(--line)}
+.flowtrack{padding:20px 0;border-bottom:1px solid var(--line);font-size:13px;color:#4d657c}
+.flowchips{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.chip{background:#eef5fb;border:1px solid #deebf2;border-radius:5px;padding:4px 10px;font-size:12px}
+.chip.teal{background:#e9f6f3;border-color:#d0ece5;color:#218375}
+.sep{color:#a1b4c4}.flowtrack small{color:var(--faint)}
+.case{border:1px solid #cbdde9;background:linear-gradient(145deg,#fff,#f4f9fd);padding:30px;border-radius:14px;margin-top:26px}
+.casehead{display:flex;justify-content:space-between;align-items:center;gap:12px}.case h3{margin:5px 0 9px}
+.case-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:23px 0}
+.case-steps div{background:#fff;border:1px solid #e1eaf1;border-radius:8px;padding:14px}.case-steps b{display:block;font-size:12px;color:#376a99}.case-steps small{display:block;font-size:12px;color:var(--sub);margin-top:7px;line-height:1.65}
+.case-note{border-top:1px solid #d8e4ee;padding-top:17px;font-size:12px;color:var(--sub)}
+.screen-section{margin:25px 0}
+.viewtabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:21px 0 15px}
+.viewtab{border:1px solid #d9e6ee;background:#fff;text-align:left;border-radius:8px;padding:11px 13px;color:#567087;font-size:12px}
+.viewtab b{font-size:11px;color:#9ab2c5;margin-right:9px}
+.viewtab[aria-selected=true]{background:#eaf4fc;border-color:#80aed0;color:#1c5f99;font-weight:750}
+.demo{background:#fff;border:1px solid #ccdeeb;border-radius:14px;overflow:hidden;box-shadow:0 19px 45px #315d8910}
+.demo-top{border-bottom:1px solid #e4ebf1;height:40px;display:flex;align-items:center;gap:7px;padding:0 14px;color:#7c96aa;font-size:11px;background:#f9fbfd}
+.demo-top .rt{margin-left:auto;color:#879dad}
+.demo-body{display:grid;grid-template-columns:133px 1fr;min-height:320px}
+.demo-side{padding:19px 13px;border-right:1px solid #e3edf3;background:#f6f9fc;font-size:11px;color:#8294a5;line-height:3.15}
+.demo-side b{display:block;font-size:13px;color:#2d658d;margin-bottom:10px;line-height:1.5}
+.demo-side .sel{color:#2d719c;background:#e5f1f9;border-radius:5px;padding:0 8px;margin-left:-8px}
+.demo-main{padding:23px;overflow:hidden}
+.demo-main h4{font-size:15px;margin:0 0 5px}.demo-main>p{font-size:11px;color:#879caf;margin:0 0 19px}
+.fakegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fakecard{padding:15px;border-radius:8px;background:#f2f7fb;border:1px solid #e4edf4;font-size:11px;color:#55728a}
+.fakecard b{display:block;color:#2c669a;font-size:19px;line-height:1.5}
+.fakecard small{font-size:10px;color:#8c9eac}
+.fakerow{display:grid;grid-template-columns:1.15fr 1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid #ebeff3;font-size:11px}
+.fakebar{height:6px;background:#e0ebf2;border-radius:7px;overflow:hidden}.fakebar i{display:block;background:#3b97b1;height:100%;width:67%}
+.fakepill{font-size:10px;background:#e6f5f0;color:#27846f;border-radius:15px;padding:3px 7px;white-space:nowrap}
+.fakepill.warm{background:#fbf1dd;color:#a97c24}
+.fakepill.red{background:#fcebe8;color:#ba5c52}
+.fake-doc{background:#fafcfe;border:1px solid #e1e9f0;border-radius:8px;padding:15px;font-size:12px;color:#4b6275;line-height:2}
+.fake-highlight{background:#fff0b7;border-bottom:2px solid #e1b657}
+.fake-review{display:grid;grid-template-columns:1fr 205px;gap:12px}
+.fake-detail{border:1px solid #c9ddeb;border-radius:8px;background:#f3f9fd;padding:14px;font-size:11px;color:#486c89}
+.fake-detail b{display:block;color:#2d6591;font-size:12px}
+.fake-detail p{margin:9px 0}
+.screenfoot{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #dce8f0}
+.screenfoot div{padding:15px 22px;font-size:12px;color:var(--sub)}.screenfoot div+div{border-left:1px solid #dce8f0}
+.screenfoot strong{color:var(--ink);display:block}
+.gates{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:27px 0}
+.gate{border-top:3px solid #5e9dbe;padding:17px 12px 10px 0}.gate small{font-size:11px;color:var(--blue);font-weight:800}.gate h4{font-size:14px;line-height:1.5;margin:8px 0}.gate p{font-size:12px;color:var(--sub);line-height:1.75}
+.gatefail{border:1px solid #ddc6a5;border-radius:9px;background:#fcf9f4;padding:19px 22px;font-size:13px;color:#7e6648}
+.techlist{margin-top:18px;border-top:1px solid #d8e5ee}
+.techrow{display:grid;grid-template-columns:100px 165px 1fr;gap:15px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.techrow b{color:var(--blue);font-size:13px}.techrow strong{font-size:13px}.techrow span{font-size:13px;color:var(--sub)}
+.roadmap{display:grid;grid-template-columns:1fr 1fr;gap:19px;margin:24px 0}.roadmap>div{padding:22px;background:#fff;border:1px solid #dbe7f1;border-radius:10px}.roadmap h4{font-size:15px;margin:10px 0}.roadmap p{font-size:12px;color:var(--sub)}
+.journey{margin-top:25px;border-top:1px solid var(--line)}
+.journeystep{display:grid;grid-template-columns:120px 1fr;gap:21px;border-bottom:1px solid var(--line);padding:21px 0}
+.journeystep>b{font-size:12px;color:var(--blue)}.journeystep h4{margin:0 0 6px;font-size:15px}.journeystep p{margin:0;font-size:13px;color:var(--sub)}
+.end{background:linear-gradient(120deg,#e7f2fc,#eaf8f5);border-radius:14px;padding:36px;margin-top:35px}.end h2{margin:8px 0}.end p{color:#536d81}
+.cta{display:inline-flex;margin-top:14px;background:var(--blue);color:white;border-radius:7px;padding:10px 19px;font-size:13px;font-weight:750}
+.cta:hover{background:#174b7c}
+.footnote{border-left:2px solid #bfd4e5;padding:10px 16px;color:#7990a4;font-size:11px;margin-top:24px;background:#f3f7fa}
+.footer{border-top:1px solid var(--line);background:white;font-size:12px;color:#8293a2;padding:28px 0}
+@media(max-width:980px){.wrap{padding:0 24px}.layout{grid-template-columns:168px 1fr;gap:26px}.hero-grid{gap:20px}.hero-art{padding:12px}.flowline,.gates{grid-template-columns:repeat(2,1fr)}.techrow{grid-template-columns:80px 120px 1fr}}
+@media(max-width:760px){.navlinks a:not(.return){display:none}.hero{padding:60px 0 50px}.hero-grid{grid-template-columns:1fr}.hero-art{max-width:520px}.hero-brief{grid-template-columns:1fr 1fr}.layout{display:block;padding-top:24px}.sidebar{position:static;flex-direction:row;white-space:nowrap;overflow:auto;border-left:0;border-bottom:1px solid var(--line);padding:0 0 12px;margin-bottom:43px}.sidebar a{flex-shrink:0}.hero h1{font-size:46px}.screenfoot,.roadmap{grid-template-columns:1fr}.screenfoot div+div{border-left:0;border-top:1px solid var(--line)}}
+@media(max-width:520px){.wrap{padding:0 18px}.hero h1{font-size:40px}.lede{font-size:16px}.hero-brief,.cols2,.module-cols,.case-steps,.fakegrid,.gates,.viewtabs{grid-template-columns:1fr}.module-tab{flex:1 1 80px}.module-body,.case{padding:20px}.flowline{grid-template-columns:1fr 1fr}.demo-body{grid-template-columns:1fr}.demo-side{display:none}.demo-main{padding:15px}.fake-review{grid-template-columns:1fr}.techrow{grid-template-columns:1fr;gap:6px}.threeflows{grid-template-columns:1fr}.flowlabel{border-bottom:0;padding-bottom:0}.flowtrack{padding-top:8px}.journeystep{grid-template-columns:1fr;gap:6px}.end{padding:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav"><a class="brand" href="/">舒薇澄<i>/</i>Selected Work</a><nav class="navlinks"><a href="#business-context">业务洞察</a><a href="#product-design">产品设计</a><a href="#trust">可信 AI</a><a class="return" href="/">← 返回作品集</a></nav></div></header>
+<div class="hero">
+<div class="wrap">
+<div class="hero-grid">
+<div><div class="eyebrow">01 / Enterprise AI · Full case study</div>
+<h1>RA Studio<span style="color:#318ac3">.</span><br>从 AI 写作工具，<br>到<em>注册项目交付系统。</em></h1>
+<p class="lede">面向药企注册申报的 AI 工作台。将分散资料、专业结论、质量审阅与 M1–M5 申报交付连接起来，探索高信任场景下 AI 与专家的有效分工。</p>
+<div class="pills"><span class="pill">AI 产品 0→1</span><span class="pill">药品注册 / CTD</span><span class="pill">工作流与交互</span><span class="pill">XAI / 质量评测</span><span class="pill">ToB 客户验证</span></div>
+<p class="hero-foot">产品经理作品复盘 · 2026 · 公开化 / 脱敏表达</p></div>
+<div class="hero-art" aria-label="RA Studio 申报文档矩阵概念示意">
+<div class="miniwindow"><div class="windowbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="windowtitle">RA Studio · Project Workspace</span></div>
+<div class="mini-dashboard"><div class="mini-side"><div>RA Studio</div><div>项目总览</div><div>资料空间</div><div>文档矩阵</div><div>AI 审阅</div><div>交付归档</div></div><div class="mini-content"><h4>申报资料矩阵 <span style="font-size:9px;color:#8ba0b0;font-weight:400"> · Project workspace</span></h4>
+<div class="matrix-mini"><b>模块</b><b>资料</b><b>撰写</b><b>审核</b><b>归档</b>
+<b>M1</b><strong>✓</strong><span>…</span><span>—</span><span>—</span>
+<b>M2</b><strong>✓</strong><strong>✓</strong><span>…</span><span>—</span>
+<b>M3</b><strong>✓</strong><strong>✓</strong><strong>✓</strong><span>…</span>
+<b>M4</b><strong>✓</strong><span>…</span><span>—</span><span>—</span>
+<b>M5</b><strong>✓</strong><span>…</span><span>—</span><span>—</span></div>
+<div class="mini-bottom"><div>交付状态<div class="minibar"></div></div><div>证据核验<div class="minibar" style="opacity:.65"></div></div></div></div></div></div>
+<p class="artcaption">基于产品业务结构重绘的界面示意，非客户原始数据</p></div>
+</div>
+<div class="hero-brief"><div><b>核心问题</b><span>如何让专业 AI 输出可核验、可审核、可交付？</span></div><div><b>个人职责</b><span>业务研究、产品设计、XAI/评测、POC 与商业化协作</span></div><div><b>项目进展</b><span>真实药企需求验证、POC 迭代与商业化项目中标</span></div></div>
+</div></div>
+<div class="wrap layout">
+<aside class="sidebar" aria-label="案例导航">
+<a href="#overview">01 / 案例概览</a>
+<a href="#business-context">02 / 业务问题</a>
+<a href="#ctd">03 / M1–M5 业务地图</a>
+<a href="#workflow">04 / 全链路流程</a>
+<a href="#product-design">05 / 具体产品设计</a>
+<a href="#screens">06 / 六个关键界面</a>
+<a href="#trust">07 / 证据与人工审阅</a>
+<a href="#quality">08 / 四轮质量门控</a>
+<a href="#tech">09 / AI 能力与边界</a>
+<a href="#commercial">10 / 客户与商业化</a>
+<a href="#ownership">11 / 我的贡献与反思</a>
+</aside>
+<main>
+<section id="overview"><div class="kicker">01 — Case Overview</div>
+<h2>需要交付的不是一篇文字，而是一整套经得起审查的证据体系。</h2>
+<p class="sub">药品注册申报中的 CTD（通用技术文件）按照 M1–M5 组织行政、综述、质量、非临床和临床资料。注册团队不仅要撰写不同章节，还要确保事实一致、证据充分、版本可控，最后形成可以正式复核与提交的申报包。</p>
+<div class="quote">我的产品切入点：不只是把写作时间缩短，而是把「资料 → 证据 → 结论 → 审核 → 提交」设计成一条可被追踪、可被人工控制的工作链。</div>
+<div class="cols2">
+<div class="thinpanel"><small>PRODUCT</small><h4>RA Studio 是什么</h4><p>以注册项目为中心的企业级 AI 工作台，组织资料接入、章节生产、句子级溯源、审阅核查与提交前检查。</p></div>
+<div class="thinpanel"><small>MY ROLE</small><h4>我具体参与什么</h4><p>与创始人及行业专家共同探索需求，参与产品信息架构与原型设计，设计 XAI 审阅与评测机制，推动客户 POC 反馈闭环和商业化方案。</p></div></div>
+</section>
+
+<section id="business-context"><div class="kicker">02 — Business Discovery</div>
+<h2>为什么注册申报不能只靠一个“会写文章”的模型？</h2>
+<p class="sub">这份产品介绍 PPT 对业务问题的归纳非常清晰：注册团队最困难的部分，往往发生在文档生产之前和之后。模型能生成语言，但无法天然理解企业中哪一份资料是有效版本、哪个结论已被专家确认、哪些章节受到了变更影响。</p>
+<div class="painlist">
+<div class="numline"><div class="num">01</div><div><h4>资料跨部门、跨系统，版本交错</h4><p>Protocol（方案）、SAP（统计分析计划）、SAR（统计分析报告）、TFL（表格/图形/列表）、CMC（化学、生产与控制）和 SOP（标准操作规程）来自不同团队。人工需要反复确认版本、来源与适用范围。</p></div></div>
+<div class="numline"><div class="num">02</div><div><h4>上下游文档强关联，修改会连锁传递</h4><p>例如 M5 临床研究报告（CSR）的安全性结论发生变化，可能需要同步检查 M2 临床综述、安全性总结和获益—风险判断；M3 工艺或稳定性数据变化，也会影响 M2 的质量综述。</p></div></div>
+<div class="numline"><div class="num">03</div><div><h4>提交前的 QA/QC 集中且成本高</h4><p>QA/QC 分别涉及质量保证与质量控制。数值、单位、引用、表格、跨文档结论、签核状态，都可能导致返工；越接近申报节点，问题发现得越晚，返工成本越高。</p></div></div>
+<div class="numline"><div class="num">04</div><div><h4>最终必须能够解释和追责</h4><p>“这段话写得对”远远不够。需要回答：引用了哪一版本的哪一张表、依据是否足够、谁做过专业确认、修改前后是否留下记录。</p></div></div></div>
+<div class="cols2" style="margin-top:20px">
+<div class="thinpanel"><small>普通生成式 AI</small><h4>优化一次输出</h4><p>给定资料生成文档，后续核查、版本管理和风险判断仍高度依赖人工。</p></div>
+<div class="thinpanel"><small>RA Studio 的产品方向</small><h4>优化整条交付链</h4><p>先组织任务和证据，再辅助生成，并在关键审核节点显式引入专业人员的判断。</p></div></div>
+</section>
+
+<section id="ctd"><div class="kicker">03 — Domain Model</div>
+<h2>从 M1–M5 出发，才能真正理解产品应该怎么组织。</h2>
+<p class="sub">用户不是泛泛地“想写一个文档”，而是要按申报模块解决不同任务。下面按模块拆解业务目标、典型卡点，以及应当如何设计 AI 的参与方式。</p>
+<div class="module-nav" role="tablist" aria-label="CTD 模块">
+<button class="module-tab" role="tab" aria-selected="false" data-module="M1"><strong>M1</strong><span>行政与区域资料</span></button>
+<button class="module-tab" role="tab" aria-selected="true" data-module="M2"><strong>M2</strong><span>综述与摘要</span></button>
+<button class="module-tab" role="tab" aria-selected="false" data-module="M3"><strong>M3</strong><span>质量 / CMC</span></button>
+<button class="module-tab" role="tab" aria-selected="false" data-module="M4"><strong>M4</strong><span>非临床研究</span></button>
+<button class="module-tab" role="tab" aria-selected="false" data-module="M5"><strong>M5</strong><span>临床研究</span></button></div>
+<div class="module-body" id="module-panel" role="tabpanel" aria-live="polite"></div>
+<div class="footnote">模块内容基于产品 PPT 第 5–6 页的业务拆解整理，是产品能力地图；并不意味着每个模块都已达到相同的上线成熟度。</div>
+</section>
+
+<section id="workflow"><div class="kicker">04 — End-to-End Workflow</div>
+<h2>AI 应参与注册交付的每一步，而不只是最后的“生成”按钮。</h2>
+<p class="sub">把客户工作链拆开后，产品的信息架构才有了依据：项目、资料、章节、审阅、交付是五个主要业务对象；对应的 AI 能力需要附着在这些真实任务节点上。</p>
+<div class="flowline">
+<div class="flowstep"><small>01 — 02</small><b>启动与资料接入</b><p>拆解任务、识别文件类型和版本、建立资料池、生成缺口列表。</p></div>
+<div class="flowstep"><small>03 — 04</small><b>注册策略与文档矩阵</b><p>法规检索、章节规划、M1–M5 映射、任务状态跟踪。</p></div>
+<div class="flowstep"><small>05 — 06</small><b>撰写与多轮质控</b><p>基于模板及证据链生成受控草稿；检查数字、引用、版本和一致性。</p></div>
+<div class="flowstep"><small>07 — 08</small><b>提交与监管问答</b><p>最终版本锁定、归档、提交检查；应答时反向关联证据并分析影响。</p></div></div>
+<h3>真正重要的是三条链同时贯通</h3>
+<div class="threeflows">
+<div class="flowlabel">业务流</div><div class="flowtrack"><div class="flowchips"><span class="chip">资料池</span><span class="sep">→</span><span class="chip">M1–M5 文档矩阵</span><span class="sep">→</span><span class="chip">章节状态</span><span class="sep">→</span><span class="chip">提交准备度</span></div><small>团队可以判断项目卡在哪里、下一步由谁推进。</small></div>
+<div class="flowlabel">证据流</div><div class="flowtrack"><div class="flowchips"><span class="chip teal">关键结论</span><span class="sep">←</span><span class="chip teal">引用来源</span><span class="sep">←</span><span class="chip teal">原始数据 / 统计依据</span><span class="sep">＋</span><span class="chip teal">版本记录</span></div><small>专家可以回到源头，判断结论为什么可信。</small></div>
+<div class="flowlabel">责任流</div><div class="flowtrack"><div class="flowchips"><span class="chip">AI 提议</span><span class="sep">→</span><span class="chip">Writer 修改</span><span class="sep">→</span><span class="chip">Reviewer 复核</span><span class="sep">→</span><span class="chip">Approver 确认</span><span class="sep">→</span><span class="chip">Audit 留痕</span></div><small>系统可以知道哪些内容尚未确认、什么动作必须由人完成。</small></div>
+</div>
+</section>
+
+<section id="product-design"><div class="kicker">05 — Product Decision</div>
+<h2>具体到一个稳定性章节，我怎样把复杂需求变成可执行的产品流程？</h2>
+<p class="sub">以 3.2.P.8 稳定性资料为例。真实的注册任务不是输入一句“请生成稳定性章节”，而是核对批次、条件、时间点、检测项目与结果，再形成与源数据一致的正式表述。</p>
+<div class="case"><div class="casehead"><span class="tag done">基于实际章节 POC 的公开化设计复盘</span><span class="small">M3 / 3.2.P.8</span></div>
+<h3>从一组原始资料，到一个可以交由专家复核的章节</h3>
+<div class="case-steps">
+<div><b>01 / 选择任务</b><small>定位目标章节：P.8.1 稳定性总结、P.8.2 承诺和方案、P.8.3 稳定性数据。</small></div>
+<div><b>02 / 绑定来源</b><small>识别批次、储存条件、考察时间点、质量项目及相应研究报告版本。</small></div>
+<div><b>03 / 先做缺口分析</b><small>识别尚缺的研究数据、附件与支持性结论，避免直接跳到写作。</small></div>
+<div><b>04 / 结构化草稿</b><small>按章节模板组织结果表、解释文字及专业结论，并保持段落与来源的映射。</small></div>
+<div><b>05 / 自动与人工复核</b><small>检查数字和单位、引用准确性、跨段落一致性；高风险结论由注册专家确认。</small></div>
+<div><b>06 / 修订与归档</b><small>保留 AI 建议、人工修改、关键版本状态和需要继续处理的问题。</small></div></div>
+<div class="case-note"><strong style="color:#456b89">为什么不是一个聊天 Agent？</strong> 章节模板与资料条件已相对明确，用户更需要一条稳定、可追踪、可重复的任务路径；开放式对话可以作为辅助入口，但不应替代结构化工作台。</div></div>
+<h3>把业务理解落实到界面对象</h3>
+<div class="tablewrap"><table><thead><tr><th>设计对象</th><th>前端交互</th><th>背后的产品判断</th></tr></thead><tbody>
+<tr><td>项目总控</td><td>按风险、待办、责任人和交付状态排序</td><td>优先帮助团队发现当前阻断，而不是只展示漂亮的完成率</td></tr>
+<tr><td>资料与文件</td><td>上传、文件分类、版本标识、来源定位</td><td>资料接入不是等于资料可信，必须先明确上下文</td></tr>
+<tr><td>文档生产</td><td>章节矩阵、缺口提示、受控生成、在线修改</td><td>以注册目录而不是 Prompt 组织用户的工作</td></tr>
+<tr><td>AI 审阅</td><td>问题卡、引用来源、修订建议、人工确认</td><td>让审核者处理“判断事项”，而非反复通读全文找问题</td></tr>
+<tr><td>交付管理</td><td>质量闸门、状态、版本锁定与归档记录</td><td>将输出文档升级为可提交的受控交付件</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="screens"><div class="kicker">06 — Interaction Gallery</div>
+<h2>六个界面，分别解决六类实际工作问题。</h2>
+<p class="sub">PPT 第 11 页集中展示了项目总控、资料接入、文件管理、并行撰写、AI 审核及监管问答。我将这些界面的任务结构重新整理成可切换的交互示意，突出每一页为什么存在、帮助用户做什么决策。</p>
+<div class="screen-section">
+<div class="viewtabs" role="tablist" aria-label="产品界面切换">
+<button class="viewtab" role="tab" data-view="overview" aria-selected="true"><b>01</b>项目总控</button>
+<button class="viewtab" role="tab" data-view="ingest" aria-selected="false"><b>02</b>资料接入</button>
+<button class="viewtab" role="tab" data-view="files" aria-selected="false"><b>03</b>文件管理</button>
+<button class="viewtab" role="tab" data-view="writing" aria-selected="false"><b>04</b>并行撰写</button>
+<button class="viewtab" role="tab" data-view="review" aria-selected="false"><b>05</b>AI 审核</button>
+<button class="viewtab" role="tab" data-view="query" aria-selected="false"><b>06</b>监管问答</button></div>
+<div class="demo"><div class="demo-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><b style="margin-left:13px">RA Studio</b><span class="rt">产品交互结构 · 脱敏重绘</span></div>
+<div class="demo-body"><div class="demo-side"><b>RA Studio</b><div>工作总览</div><div>资料空间</div><div>文档矩阵</div><div>文档生产</div><div>AI 质量审阅</div><div>监管问答</div></div><div class="demo-main" id="screen-content" aria-live="polite"></div></div>
+<div class="screenfoot"><div><strong id="screen-goal"></strong><span id="screen-explain"></span></div><div><strong>关键交互决策</strong><span id="screen-choice"></span></div></div>
+</div></div>
+<div class="footnote">界面结构参考 PPT 中的原型截图，并重新绘制为脱敏交互示意，不使用客户原始文件或统计数据；它不是上线产品的逐像素截图。</div>
+</section>
+
+<section id="trust"><div class="kicker">07 — XAI / Human-in-the-loop</div>
+<h2>审阅的焦点，要从“这段话对吗”变成“这项结论有什么依据”。</h2>
+<p class="sub">这是我在 RA Studio 中最重视的设计问题。专业内容即使语言通顺，也可能遗漏限定条件、错用一个版本，或将多个事实混在一句话中。审阅界面需要把可疑点、来源证据与人的处置动作放在同一上下文里。</p>
+<div class="demo" style="margin-top:25px"><div class="demo-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><b style="margin-left:13px">3.2.P.8 稳定性 / 章节审阅</b><span class="rt">交互概念演示</span></div>
+<div class="demo-main fake-review" style="padding:22px">
+<div class="fake-doc"><div class="small" style="margin-bottom:12px">稳定性 · 生成草稿 / 审阅中</div>在预设储存条件下，研究样品在指定考察周期内<span class="fake-highlight">主要质量指标保持稳定</span>。该陈述需结合具体批次、检测项目、接受标准和原始研究记录逐项确认。<div class="small" style="margin-top:14px">点击高亮陈述后，右侧显示所需核验的信息结构。</div></div>
+<div class="fake-detail"><b>Claim / 事实主张核验</b><p>主张：质量指标保持稳定</p><p>支持材料：稳定性研究表 / 原始报告</p><p>核验维度：批次 · 时间点 · 条件 · 接受标准</p><p>状态：<strong style="color:#ac7428">等待专家确认</strong></p><div style="border-top:1px solid #d9e7ef;padding-top:10px">查看来源　·　接受建议　·　退回修订</div></div>
+</div></div>
+<div class="cols2" style="margin-top:20px">
+<div class="thinpanel"><small><span class="tag done">已有实践</span></small><h4>句子级溯源与 AI 审阅</h4><p>将生成内容与来源文档定位关联，呈现 AI 审阅建议和修改后句子，缩短人工在全文与原始资料间往返查找的路径。</p></div>
+<div class="thinpanel"><small><span class="tag future">设计迭代方向</span></small><h4>Claim 级拆分与核验</h4><p>将句子内的事实、参数限定、结论和规范引用拆开，让不同主张分别绑定证据、核验规则与人工确认状态。</p></div></div>
+<h3>AI 什么时候必须停止，让人来判断？</h3>
+<div class="tablewrap"><table><thead><tr><th>事件</th><th>AI 该提供什么</th><th>人的最终职责</th></tr></thead><tbody>
+<tr><td>缺少原始数据</td><td>标记证据缺口，不填补未经验证的数字</td><td>补充资料或明确不可继续</td></tr>
+<tr><td>同一结论存在版本冲突</td><td>展示冲突来源、时间与版本</td><td>确定有效基线并记录理由</td></tr>
+<tr><td>法规条款或专业适用性不明确</td><td>提供候选依据和不确定性提示</td><td>作专业适用性判断</td></tr>
+<tr><td>涉及最终提交与签核</td><td>汇总待办、风险、变更及审核记录</td><td>审批、确认、锁定版本</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="quality"><div class="kicker">08 — Quality Gates</div>
+<h2>质量不应该在交付最后一刻才被检查。</h2>
+<p class="sub">产品 PPT 提出的四轮质量门控，将“好不好”变成不同阶段可执行的审核条件。我的理解是：AI 负责提前发现问题、定位依据、推动确认；不能让 AI 自己给自己盖上“通过”的章。</p>
+<div class="gates">
+<div class="gate"><small>GATE 01</small><h4>医学 / 科学合理性</h4><p>检查关键结论是否有科学依据，是否出现 unsupported claim 或专业逻辑冲突。由相关专家核定。</p></div>
+<div class="gate"><small>GATE 02</small><h4>注册结构与 CTD/eCTD 合规</h4><p>检查章节映射、必备材料、目录结构与区域申报要求，输出缺口与结构报告。</p></div>
+<div class="gate"><small>GATE 03</small><h4>数据、引用和跨文档一致性</h4><p>核对 CSR、TFL、SAR、SAP，或 M3 原始表与 M2 汇总之间的口径及版本关系。</p></div>
+<div class="gate"><small>GATE 04</small><h4>流程审计与版本放行</h4><p>确认修订和复核记录、责任人、审批状态和最终版本，判断是否进入交付状态。</p></div></div>
+<div class="gatefail"><strong>门控失败时，应该发生什么？</strong> 产生有来源的结构化问题项 → 指派责任与风险等级 → 专家确认或退回修订 → 记录处理结果 → 重新检查，未通过门控的章节不能被误标为可提交。</div>
+<h3>为什么要设计“问题项”，而不是只输出一大段 AI 审阅意见？</h3>
+<p class="sub">问题项具有稳定字段：关联章节、问题类型、风险级别、引用来源、AI 建议、责任人、处理状态和留痕。它既能用于审阅者逐条处理，也能回流到产品评测体系，让团队知道最常出现的是解析错误、检索遗漏，还是写作阶段的推断越界。</p>
+</section>
+
+<section id="tech"><div class="kicker">09 — AI System Design</div>
+<h2>技术能力必须服务业务规则，而不是为了“多 Agent”而多 Agent。</h2>
+<p class="sub">PPT 将能力分为 Workflow、Agent、Skill、XAI 和 Audit 五层。对产品经理而言，最重要的是解释清楚每一层约束什么、解决什么问题，以及哪些是已实践的界面能力、哪些仍属于迭代方向。</p>
+<div class="techlist">
+<div class="techrow"><b>Workflow</b><strong>定义流程与准入</strong><span>规范输入输出、任务状态、关键责任人和放行条件，防止跳过资料确认、质控及审批。</span></div>
+<div class="techrow"><b>Agent</b><strong>处理复杂专业任务</strong><span>针对资料识别、证据检索、文档重组、问题检查等任务进行分工；是否使用多智能体，应由任务复杂度与评测结果决定。</span></div>
+<div class="techrow"><b>Skill</b><strong>沉淀可复用规则</strong><span>将法规规则、章节模板、术语规范和历史错误类型沉淀为可版本管理的专业能力，而不是一次性 Prompt。</span></div>
+<div class="techrow"><b>XAI</b><strong>解释输出依据</strong><span>把关键陈述、证据、人工意见和修改记录关联，让生成结果能够被具体核查。</span></div>
+<div class="techrow"><b>Audit</b><strong>保留责任轨迹</strong><span>记录 AI 建议、人工修改、确认动作和版本状态；具体合规声明仍需正式系统验证，不将设计意图等同于认证结果。</span></div>
+</div>
+<div class="roadmap">
+<div><span class="tag done">项目已实践的重点</span><h4>业务与原型、章节 POC、审阅溯源</h4><p>包括需求访谈、产品信息架构、章节流程、原型与交互、句子级溯源体验、评价维度和客户反馈闭环。</p></div>
+<div><span class="tag future">架构完善 / 产品规划</span><h4>Claim 级核验、跨文档影响与完整交付门控</h4><p>将散点能力升级成全链路项目系统，持续补齐结构化证据、规则资产、版本影响、可审计交付等机制。</p></div></div>
+<div class="footnote">本页展示的是产品架构理解和参与过的设计方向，不宣称所有 Workflow/Agent/Skill 能力均已按图独立实现或完成企业合规认证。</div>
+</section>
+
+<section id="commercial"><div class="kicker">10 — Customer Validation / Business</div>
+<h2>真正的商业化验证，是客户能不能放心把这项工作交给系统。</h2>
+<p class="sub">企业客户不会只因为生成演示效果好就采购。需求必须落在真实章节、真实资料、明确验收标准，以及公司的部署、权限与交付约束上。我参与的产品工作贯穿了这些环节。</p>
+<div class="journey">
+<div class="journeystep"><b>01 / 需求识别</b><div><h4>与注册、CMC、临床等角色共同明确价值点</h4><p>不是先展示模型功能，而是确认团队目前在哪些章节消耗最多人力、哪些错误风险最高、哪些能力具有跨客户复用价值。</p></div></div>
+<div class="journeystep"><b>02 / POC 验证</b><div><h4>把演示变成客户可复核的章节交付</h4><p>围绕 M3 稳定性章节（如 3.2.S.7、3.2.P.8）及其他专业模块开展验证，组织资料、生成样例、客户专家审阅和问题清单。</p></div></div>
+<div class="journeystep"><b>03 / 验收口径</b><div><h4>共同定义准确、完整、规范与一致的评价维度</h4><p>不仅比较生成速度，更关心缺失内容、数值与单位错误、证据引用定位、版本一致性，以及发现问题后的修复路径。</p></div></div>
+<div class="journeystep"><b>04 / 方案与商务</b><div><h4>将 POC 经验带入产品报价、述标和交付边界</h4><p>在实际客户讨论中，将章节范围、企业权限、部署方式、培训与验收节点组织成可采购、可交付的方案；团队最终获得生物药企业 CMC 申报资料 AI 应用项目的中标机会。</p></div></div></div>
+<div class="quote">对我而言，项目中标的价值，不只是一个结果标签，而是它证明了产品方案需要同时回答：专业用户是否需要、技术是否可靠、实施能否落地、客户是否愿意为此付费。</div>
+<p class="small">商业结果为团队共同完成；对外未展示具体合同金额、未核实的效率提升比例及客户敏感原始资料。</p>
+</section>
+
+<section id="ownership"><div class="kicker">11 — Ownership & Reflection</div>
+<h2>这段经历，塑造了我理解 AI 产品的方式。</h2>
+<div class="cols2"><div class="thinpanel"><small>直接参与 / 产品职责</small><h4>从模糊机会到结构化产品</h4><p>专业场景洞察、业务流程建模、产品信息架构与原型、XAI 审阅交互、POC 需求与评测闭环、客户演示与方案推进。</p></div><div class="thinpanel"><small>跨职能协作 / 团队成果</small><h4>与研发、行业专家及商务共同推进</h4><p>模型、文档解析、检索、系统后端与合规实施等技术工作由研发等团队协同；专业适用性依赖领域专家，商业签约是跨职能结果。</p></div></div>
+<div class="painlist" style="margin-top:20px">
+<div class="numline"><div class="num">01</div><div><h4>信任不是“准确率 99%”这一个数字</h4><p>可靠的 AI 产品必须能让用户看到依据、知道不确定性、方便修改，并在需要时保留人的判断权。</p></div></div>
+<div class="numline"><div class="num">02</div><div><h4>流程设计往往比单次生成更创造价值</h4><p>长周期任务里，真正的成本在于资料准备、跨团队协同、核验、返工和复用。产品要围绕完整工作流做设计。</p></div></div>
+<div class="numline"><div class="num">03</div><div><h4>评测的终点，是下一次产品决策</h4><p>错误不能只留在报表里；需要被拆成数据、检索、规则、生成和交互层的具体问题，形成可验证的优化行动。</p></div></div>
+<div class="numline"><div class="num">04</div><div><h4>同一方法可以迁移到更广泛的 AI 商业产品</h4><p>无论是经营诊断 Agent 还是消费决策 AI，重要的都是事实与假设的区分、依据呈现、人工干预边界与真实效果评价。</p></div></div></div>
+</section>
+<div class="end"><div class="kicker">Next / More Work</div><h2>把复杂问题变成可用、可信、可验证的 AI 产品。</h2><p>RA Studio 是我的商业化产品实践起点，也让我更坚定地走向业务与人机协作结合的 AI 产品设计。</p><a href="/" class="cta">返回全部作品 ↗</a></div>
+</main></div>
+<footer class="footer"><div class="wrap">© 2026 舒薇澄 · RA Studio 案例复盘 <span style="float:right">公开化设计展示 / 不含客户原始申报资料</span></div></footer>
 <script>
-document.querySelectorAll('.tabbar button').forEach((b,i,buttons)=>{b.addEventListener('click',()=>{buttons.forEach((other,j)=>{other.setAttribute('aria-selected',String(i===j));document.getElementById('flow'+(j+1)).hidden=i!==j})})});
-const links=[...document.querySelectorAll('.sidebar a')];const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.hash==='#'+e.target.id))}})},{rootMargin:'-18% 0px -65% 0px'});document.querySelectorAll('main section[id]').forEach(x=>obs.observe(x));
-</script></body></html>
+const modules={
+M1:{title:"行政与区域资料",intro:"不同地区的申报要求、申请信息与签章版本必须准确对应。",pain:["地区法规和必备文件要求不同","签章、日期、版本可能不一致","监管沟通和补充材料分散"],ai:["生成区域必备文件清单","识别行政字段与版本差异","检查资料完整性及地区适配"]},
+M2:{title:"综述与摘要",intro:"向审评方解释 M3–M5 的关键事实和获益—风险逻辑。",pain:["需要跨质量、非临床和临床报告提取结论","底层报告变化时，上层综述可能滞后","跨章节评价与原始报告不一致"],ai:["提取关键结论并生成受控草稿","为综述中的主张反向绑定依据","开展上层摘要与底层报告一致性检查"]},
+M3:{title:"质量 / CMC",intro:"证明药品生产工艺、质量控制、稳定性研究与放行策略有充分依据。",pain:["批次、稳定性、方法验证资料较分散","3.2 与 2.3 综述存在跨文件同步压力","版本变更可能影响工艺与质量结论"],ai:["按章节提取参数、批次和检测条件","核对 3.2 与 2.3 关键事实","呈现质量风险、数据差异和证据缺口"]},
+M4:{title:"非临床研究",intro:"组织药效、药理、毒理和安全性评价的证据链。",pain:["NOAEL、暴露倍数和毒理发现散落各报告","M2 非临床综述与 M4 报告可能不一致","研究报告及 QA 归档关联复杂"],ai:["归类非临床报告并提取关键结论","建立研究结论到源报告的可追踪关系","开展 M2–M4 一致性和风险检查"]},
+M5:{title:"临床研究",intro:"以 CSR、SAP、SAR、TFL 等材料支撑疗效和安全性结论。",pain:["数据截止点与统计分析基线必须统一","SAR、TFL 与 CSR 的关键结论需要一致","临床结论的更新会影响 M2 综述"],ai:["建立 SAP → TFL → SAR → CSR 证据链","辅助生成或重组 CSR 文档","做跨文档数据核验、XAI 与变更影响分析"]}
+};
+const screenViews={
+overview:{name:"项目总控",goal:"一眼知道项目最需要处理什么",explain:"以待处理工作、风险及截止时间组织首页，而非只放总量统计。",choice:"让注册负责人先解决阻断项，再去看项目大盘。",html:'<h4>项目工作总览</h4><p>Project / 进度 · 风险 · 责任人</p><div class="fakegrid"><div class="fakecard"><small>待补资料</small><b>03</b></div><div class="fakecard"><small>待人工复核</small><b>08</b></div><div class="fakecard"><small>高风险问题</small><b>02</b></div></div><div style="margin-top:22px"><div class="fakerow"><strong>3.2.P.8 稳定性核对</strong><span>数据截止点需确认</span><span class="fakepill red">阻断</span></div><div class="fakerow"><strong>M2 综述一致性</strong><span>待专家审阅</span><span class="fakepill warm">复核中</span></div><div class="fakerow"><strong>M3 章节资料映射</strong><span>已完成版本检查</span><span class="fakepill">已确认</span></div></div>'},
+ingest:{name:"资料接入",goal:"让资料具备可用的上下文",explain:"接入时明确归属模块、文件类型、版本和状态，为后续生成建立可信输入。",choice:"上传后先识别与归档，不直接等同于进入生成依据。",html:'<h4>资料接入与识别</h4><p>选择文件 / 批量接入 / 自动识别</p><div class="fakecard" style="padding:23px;text-align:center;border-style:dashed"><b style="font-size:17px">＋ 选择文件或拖入资料</b><small>支持研究报告、表格、申报模板等</small></div><div class="fakerow" style="margin-top:18px"><strong>稳定性研究报告.pdf</strong><span>归属 M3 · v2</span><span class="fakepill">已识别</span></div><div class="fakerow"><strong>稳定性趋势表.xlsx</strong><span>归属 M3 · 待确认版本</span><span class="fakepill warm">需确认</span></div>'},
+files:{name:"文件管理",goal:"区分“有文件”和“可用的受控资料”",explain:"提供全局检索、模块分类和版本线索，减少引用旧资料的风险。",choice:"将文件状态、引用情况与归属章节关联，减少跨系统查找。",html:'<h4>项目资料空间</h4><p>文件分类 / 来源版本 / 关联章节</p><div class="fakegrid"><div class="fakecard"><small>已归类</small><b>M1–M5</b></div><div class="fakecard"><small>文件版本</small><b>可追踪</b></div><div class="fakecard"><small>章节关联</small><b>可查看</b></div></div><div class="fakerow" style="margin-top:15px"><strong>CMC 原始数据集</strong><span>关联 3.2.P.8</span><span class="fakepill">有效</span></div><div class="fakerow"><strong>历史会议纪要</strong><span>待确认适用性</span><span class="fakepill warm">待核实</span></div><div class="fakerow"><strong>旧版分析方法</strong><span>版本非当前</span><span class="fakepill red">勿引用</span></div>'},
+writing:{name:"并行撰写",goal:"以章节矩阵组织多人协作",explain:"目标章节、参考资料和待处理缺口清晰可见，降低遗漏及任务上下文流失。",choice:"先展示结构与缺口，再允许人工决定何时启动 AI 撰写。",html:'<h4>章节生产 / 3.2.P.8</h4><p>章节清单 · 资料映射 · 并行任务</p><div class="fakegrid"><div class="fakecard"><small>3.2.P.8.1</small><b style="font-size:13px">总结</b><span class="fakepill">草稿中</span></div><div class="fakecard"><small>3.2.P.8.2</small><b style="font-size:13px">承诺与方案</b><span class="fakepill warm">缺口待补</span></div><div class="fakecard"><small>3.2.P.8.3</small><b style="font-size:13px">数据</b><span class="fakepill">资料齐备</span></div></div><div class="fake-doc" style="margin-top:18px">当前建议：在启动生成前，确认长期稳定性数据时间范围，并补齐所需批准资料。<div class="minibar"></div></div>'},
+review:{name:"AI 审核",goal:"把长篇审阅转换成可处理问题",explain:"问题、来源与修订建议同屏呈现，便于专家快速核验及处置。",choice:"不让 AI 自动给最终结论，允许专家接受、修改、驳回并记录责任。",html:'<h4>句子级证据溯源</h4><p>证据核验 · AI 审阅建议 · 人工处置</p><div class="fake-review"><div class="fake-doc">在预设条件下，<span class="fake-highlight">指定质量指标保持稳定</span>，应核对原始数据及接受标准。</div><div class="fake-detail"><b>审核问题 / 01</b><p>结论依据待核验</p><p>来源：稳定性研究表</p><p>建议：回到原始表确认</p><span class="fakepill warm">等待专家复核</span></div></div>'},
+query:{name:"监管问答",goal:"让每条问题有责任人与证据路径",explain:"监管疑问不只生成文字答复，还需要关联来源证据、追踪处理状态及影响章节。",choice:"问题项与历史应答、原报告、变更影响链保持关联。",html:'<h4>审评沟通与问题跟踪</h4><p>提问 / 证据定位 / 应答草稿 / 闭环</p><div class="fakerow"><strong>问题 01 / 结论依据</strong><span>关联 M3 稳定性报告</span><span class="fakepill warm">处理中</span></div><div class="fakerow"><strong>问题 02 / 数据版本</strong><span>跨文档影响待核查</span><span class="fakepill red">待确认</span></div><div class="fakerow"><strong>问题 03 / 补充材料</strong><span>附件与回答已关联</span><span class="fakepill">已关闭</span></div><div class="fake-doc" style="margin-top:16px">问题处理闭环：查找相关章节 → 定位证据 → 起草回应 → 专业人员复核 → 状态归档</div>'}
+};
+function renderModule(key){const d=modules[key];document.querySelectorAll('[data-module]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.module===key)));document.getElementById('module-panel').innerHTML='<div class="kicker">'+key+' / CTD MODULE</div><h3>'+d.title+'</h3><p>'+d.intro+'</p><div class="module-cols"><div><h4>真实业务卡点</h4><ul class="bullets">'+d.pain.map(x=>'<li>'+x+'</li>').join('')+'</ul></div><div><h4>对应的产品与 AI 解法</h4><ul class="bullets">'+d.ai.map(x=>'<li>'+x+'</li>').join('')+'</ul></div></div>';}
+function renderScreen(key){const d=screenViews[key];document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.view===key)));document.getElementById('screen-content').innerHTML=d.html;document.getElementById('screen-goal').textContent=d.goal;document.getElementById('screen-explain').textContent=d.explain;document.getElementById('screen-choice').textContent=d.choice;}
+document.querySelectorAll('[data-module]').forEach(b=>b.addEventListener('click',()=>renderModule(b.dataset.module)));
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>renderScreen(b.dataset.view)));
+renderModule('M2');renderScreen('overview');
+const sideLinks=[...document.querySelectorAll('.sidebar a')];
+if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){sideLinks.forEach(link=>link.classList.toggle('active',link.hash==='#'+entry.target.id))}}),{rootMargin:'-17% 0px -66% 0px'});document.querySelectorAll('main section[id]').forEach(s=>observer.observe(s));}
+</script>
+</body></html>
